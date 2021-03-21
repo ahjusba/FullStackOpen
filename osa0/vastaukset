@@ -1,0 +1,28 @@
+Tehtävä 0.4:
+Käyttäjä luo uuden muistiinpanon ollessaan sivulla /notes
+selain->palvelin: HTTP POST "note"  to /exampleapp/new_note
+palvelin: Kutsuu luokkaa "/new_notes" ja pushaa sisällön muistiinpanot sisältävään taulukkoon "notes".
+palvelin->selain: Redirectaus (302) HTTP GET Location /notes HTML-koodi
+selain->palvelin: HTTP GET main.css
+palvelin->selain: main.css
+selain->palvelin: HTTP GET main.js
+palvelin->selain: main.js
+main.js -> visualisoi JSON-tiedoston
+
+Tehtävä 0.5:
+selain-palvelin: HTTP GET /spa HTML-koodi
+palvelin-selain: spa.html
+selain-palvelin: HTTP GET main.css
+palvelin-selain: main.css
+selain-palvelin: HTTP GET spa.js
+palvelin-selain: spa.js
+spa.js onreadystatechange kutsu -> redrawNotes()
+
+Tehtävä 0.6:
+Käyttäjä luo uuden muistiinpanon ollessaan SPA sivulla /notes
+selain-> lomake-elementin avulla 'notes_form' kutsutaan funktiota 'e'.
+'e' ->  e.preventDefault (estää lomakkeen lähetyksen oletusarvoisen toiminnan).
+     -> luo muistiinpanon taulukkoon notes.push(note)
+     -> Uudelleenrenderöi muistiinpanotaulukon redrawNotes()
+     -> Lähettää muistiinpanon palvelimelle HTTP POST /new_note_spa
+

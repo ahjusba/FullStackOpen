@@ -1,6 +1,13 @@
 import React from 'react'
 
+
+
 const App = () => {
+
+  const merkkijono = 'stringstring'
+  let pituus = merkkijono.length
+  console.log(pituus)
+
   const course = {
     name: 'Half Stack application development',
     parts: [
@@ -24,6 +31,7 @@ const App = () => {
       <Header course={course.name} /> {/*We could send the object "course", and access the properties within the components"*/}
       <Content parts={course.parts} />
       <Total parts={course.parts} />
+      <button>NAPPI</button>
     </div>
   )
 }

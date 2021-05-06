@@ -1,7 +1,7 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
 
-POST http://localhost:3001/api/notes/ 
-Content-type: application/json
 {
-    "content": "VS Core rest is pretty good",
-    "important": false
+    "name": "Jussi R",
+    "number": "050-402-7155"
 }
